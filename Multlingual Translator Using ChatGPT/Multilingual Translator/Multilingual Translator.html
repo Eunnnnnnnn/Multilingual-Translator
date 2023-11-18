@@ -1,0 +1,42 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Translator</title>
+    <link rel="stylesheet" href="../Multilingual Translator/style.css">
+</head>
+<body>
+    <h1>Multilingual Translator</h1>
+    <div class="container">
+        <div class="text-area">
+            <form action="/translate" method="post">
+                <div class="top">
+                    <label for="target_language">Select target language</label>
+                    <select id="target_language" name="target_language">
+                        <option value="en">English</option>
+                        <option value="kr">Korean</option>
+                        <option value="jp">Japanese</option>
+                        <option value="zh">Chinese</option>
+                        <option value="fr">French</option>
+                    </select>            
+                    <button type="submit">Translate</button>
+                </div>
+                <label for="source_text">Enter text</label>
+                <br>
+                <textarea id="source_text" name="source_text" rows="4" cols="50" required placeholder="번역할 내용을 입력하세요."></textarea>      
+            </form>
+            <div class="target">
+                <label for="target_text">Translation</label>
+                <br>
+                <textarea id="target_text" name="target_text" rows="4" cols="50" required></textarea>   
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="../Multilingual Translator/script.js"></script>
+   
+</body>
+</html>
